@@ -11,45 +11,28 @@ with open ("movies_clean.csv", "r", encoding="utf8") as csvfile:
         data.append(data_info)
     csvfile.close()
 
-# list_of_title=[]
-# for each in range(len(data)):
-#     list_of_title.append(data[each][0])
-# print(list_of_title)
+# class Numofmovies:
+#     def __init__(self,entire_movies_list):
+#         self.entirelist=entire_movies_list
+#     def __str__(self):
+accum=0
+for each in data:
+    accum+=1
+print(accum)
+
 
 class Movie:
-    def __init__(self,one_movie_info):
-        self.one_movie_info=one_movie_info
-
-class Numofmovies:
-    def __init__(self,entire_movies_list):
-        self.emv=entire_movies_list
+    def __init__(self,data):
+        # self.one_movie_info=one_movie_info
+        self.title=data[0]
+        self.rating=data[14]
     def __str__(self):
-        accum=0
-        for each in self.emv:
-            accum+=1
-        return str(accum)
-    def generatelistmovies(self):
-        list_of_title=[]
-        for each in range(len(self.emv)):
-            list_of_title.append(self.emv[each][0])
-
-        space=" "
-        sample_movies= " "
-        random.shuffle(list_of_title)
-        short_movies_list=list_of_title[0:100]
-        options = permutations (short_movies_list, 5)
-        all_options= list(options)
-        random.shuffle(all_options)
-        for each in all_options[:5]:
-        #     z=space.join(each)
-        #     sample_movies=sample_movies+z+" | " +each[14]+"\n"
-        # return sample_movies
-            return "{} | {}"+"<br>".format(each[0], each[14])
+        return "{} | {} ".format(self.title,self.rating)
 
 
+testlist=[]
+for each in data[1:7]:
+    testlist.append(Movie(each))
 
-test = Numofmovies(data)
-
-#print(test)
-
-print(test.generatelistmovies)
+for each in testlist:
+    print(each)
