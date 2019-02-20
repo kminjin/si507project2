@@ -11,15 +11,6 @@ with open ("movies_clean.csv", "r", encoding="utf8") as csvfile:
         data.append(data_info)
     csvfile.close()
 
-# class Numofmovies:
-#     def __init__(self,entire_movies_list):
-#         self.entirelist=entire_movies_list
-#     def __str__(self):
-accum=0
-for each in data:
-    accum+=1
-print(accum)
-
 
 class Movie:
     def __init__(self,data):
@@ -34,13 +25,6 @@ testlist=[]
 for each in data[1:7]:
     testlist.append(str(Movie(each)))
 
-# space="<br"
-# sample_movies= " "
-# for each in testlist:
-#     z=space.join(each)
-#     sample_movies=sample_movies+z+"\n"
-#
-# print(sample_movies)
 
 
 sample_movies=" "
@@ -50,12 +34,7 @@ print(sample_movies)
 
 
 
-# linebreak="<br>"
-# sample_movies= " "
-# for each in testlist:
-#     z=linebreak.join(each)
-#     sample_movies=sample_movies+z
-
-# print(sample_movies)
-#
-# print(type(sample_movies))
+accum=0
+for each in testlist:
+    accum+=1
+print(accum)
