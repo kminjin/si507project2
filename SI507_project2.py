@@ -10,7 +10,6 @@ def index():
     return '<h1>{} movies recorded</h1>'.format(accum)
 
 
-# # Should display a list of movies from the CSV data -- any! (At least 5 movies, but could be any number and any subsection you want -- the first five, a random set of five or ten… anything you like, completely up to you.)
 with open ("movies_clean.csv", "r", encoding="utf8") as csvfile:
     reader=csv.reader(csvfile)
     data=[]
