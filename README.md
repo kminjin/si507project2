@@ -1,7 +1,7 @@
 # si507project2
 
 
-###Minimal Flask Project
+### Minimal Flask Project
 #### :open_mouth:What is in Lab 3:
 You can find the class Movie in movies_tools.py. The class will allow a user to see movie title and its imdb rating in a form of a string. There is also code in movies_tools.py to get the number of movies in the movies_clean.csv.
 
