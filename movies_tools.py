@@ -32,7 +32,30 @@ class Movie:
 
 testlist=[]
 for each in data[1:7]:
-    testlist.append(Movie(each))
+    testlist.append(str(Movie(each)))
 
+# space="<br"
+# sample_movies= " "
+# for each in testlist:
+#     z=space.join(each)
+#     sample_movies=sample_movies+z+"\n"
+#
+# print(sample_movies)
+
+
+sample_movies=" "
 for each in testlist:
-    print(each)
+    sample_movies=sample_movies+str(each)+"<br>"
+print(sample_movies)
+
+
+
+# linebreak="<br>"
+# sample_movies= " "
+# for each in testlist:
+#     z=linebreak.join(each)
+#     sample_movies=sample_movies+z
+
+# print(sample_movies)
+#
+# print(type(sample_movies))
